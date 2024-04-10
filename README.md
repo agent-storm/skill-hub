@@ -8,4 +8,3 @@ The one stop to know it all.
 Authored by:
 <br>
 Srinith | Shiva | Raghav
-<br>
