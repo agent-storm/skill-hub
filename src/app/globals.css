@@ -11,6 +11,38 @@
   font-family: Nullfont;
   src: url("./assets/null_font.otf") format("opentype");
 }
+
+.main-bg {
+  background-image: url('./assets/1556342.jpg');
+}
+
+.login-option-btn{
+  transition: 0.5s;
+}
+
+.login-option-btn:hover {
+  background: #fd5454;
+  color: black;
+  transform: scale(1.1);
+}
+
+.hover-effect {
+  transition: 0.65s;
+}
+
+.hover-effect:hover {
+  color: #fd5454;
+  transform: scale(1.1);
+}
+.hover-effect-underline {
+  transition: 1s;
+}
+.hover-effect-underline:hover{
+  color: #fd5454;
+  text-decoration: underline;
+  transform:scale(1.5);
+}
+
 @layer components {
   .sidebar-icon {
     @apply relative flex items-center justify-center 
