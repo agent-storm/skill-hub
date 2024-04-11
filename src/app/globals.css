@@ -2,32 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: Nullfont;
+  src: url("./assets/null_font.otf") format("opentype");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.main-bg {
+  background-image: url('./assets/1556342.jpg');
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.login-option-btn{
+  transition: 0.5s;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.login-option-btn:hover {
+  background: #fd5454;
+  color: black;
+  transform: scale(1.1);
+}
+
+.hover-effect {
+  transition: 0.65s;
+}
+
+.hover-effect:hover {
+  color: #fd5454;
+  transform: scale(1.1);
+}
+.hover-effect-underline {
+  transition: 1s;
+}
+.hover-effect-underline:hover{
+  color: #fd5454;
+  text-decoration: underline;
+  transform:scale(1.5);
+}
+
+@layer components {
+  .sidebar-icon {
+    @apply relative flex items-center justify-center 
+    h-12 w-12 mt-2 mb-2 mx-auto  
+  bg-gray-400 hover:bg-green-600 dark:bg-gray-800 
+  text-green-500 hover:text-white
+    hover:rounded-xl rounded-3xl
+    transition-all duration-300 ease-linear
+    cursor-pointer shadow-lg ;
   }
 }
