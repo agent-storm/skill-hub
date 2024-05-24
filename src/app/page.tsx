@@ -1,8 +1,10 @@
-import Link from "next/link";
+
 import "./globals.css";
+import {GoogleSignInBtn, GithubSignInBtn} from "./components/authButtons";
 
 
-export default function Home() {
+export default async function Home() {
+
   return (
     <main className="main-bg h-screen w-screen flex items-center justify-center bg-[#161616] overflow-hidden">  
       <div className="h-full w-full flex flex-row items-center justify-center">
@@ -48,10 +50,10 @@ export default function Home() {
             </svg>
               <div className="h-3/4 w-full z-[1] pt-[2vh]">
                 <div className="w-full flex justify-center items-center"><h1 className="text-[7vw] text-[#CECECE]">Lo<span className="text-[#fd5454]">g</span>in</h1></div>
-
-                <div className="h-[15%] w-full flex justify-center items-center"><button className="login-option-btn w-[50%] h-[65%] border-solid border-[3px] border-[#fd5454] rounded-[10px] text-[1.5vw] text-[#CECECE]">Login with Google</button></div>
-                <div className="h-[15%] w-full flex justify-center items-center"><button className="login-option-btn w-[50%] h-[65%] border-solid border-[3px] border-[#fd5454] rounded-[10px] text-[1.5vw] text-[#CECECE]">Login with Github</button></div>
-                <div className="h-[15%] w-full flex justify-center items-center"><button className="login-option-btn w-[50%] h-[65%] border-solid border-[3px] border-[#fd5454] rounded-[10px] text-[1.5vw] text-[#CECECE]">Login with LinkedIn</button></div>
+                
+                  <GoogleSignInBtn />
+                  <GithubSignInBtn />
+                {/* <div className="h-[15%] w-full flex justify-center items-center"><button className="login-option-btn w-[50%] h-[65%] border-solid border-[3px] border-[#fd5454] rounded-[10px] text-[1.5vw] text-[#CECECE]">Login with LinkedIn</button></div> */}
               </div>
           </div>
         </div>
@@ -59,6 +61,9 @@ export default function Home() {
     </main>
   );
 }
+
+
+
 
 
 
