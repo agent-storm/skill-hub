@@ -1,12 +1,26 @@
+
 import Card from "@/app/components/card";
 import Add from "@/app/components/add";
 
-export default function mainstats() {
+import { authConfig } from "../auth";
+import { getServerSession } from "next-auth";
+import { redirect } from "next/navigation";
+
+import Link from "next/link"
+
+export default async function Mainstats() {
+    const session = await getServerSession(authConfig);
+    if (!session) {
+        redirect("/loginpage");
+    }
     return (
         <main className="flex flex-col h-screen dark:bg-gray-400">
             <div className="flex flex-row justify-between h-1/4">
                 <p >intro</p>
                 <p >link</p>
+                <Link href="/api/auth/signout?callbackUrl=/">
+                    Logout
+                </Link>
             </div>
             <div className="grid grid-cols-3
                             h-[62%] border border-solid border-black
@@ -20,6 +34,5 @@ export default function mainstats() {
                 <Add />
             </div>
         </main>
-
     )
 }
