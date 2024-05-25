@@ -1,8 +1,17 @@
-import Link from "next/link";
+
 import "./globals.css";
 
 
-export default function Home() {
+import { authConfig } from "./auth";
+import { getServerSession } from "next-auth";
+import LoginPage from "./loginpage/page";
+import Mainstats from "./mainpage/page";
+
+export default async function Home() {
+  const session = await getServerSession(authConfig);
+  if(session){
+
+  }
   return (
     <main className="h-screen w-screen flex items-center justify-center bg-[#161616] overflow-hidden">  
       <div className="h-full w-full flex flex-row items-center justify-center">
@@ -38,7 +47,7 @@ export default function Home() {
             </svg>
             
               <div className="h-3/4 w-full z-[1] pt-[2vh]">
-                <div className="w-full flex justify-center items-center"><h1 className="text-[7vw] text-white">Lo<span className="text-[rgb(253,84,84)]">g</span>in</h1></div>
+                <div className="w-full flex justify-center items-center"><h1 className="text-[7vw] text-white">Lo<span className="text-[#fd5454]">g</span>in</h1></div>
 
                 <div className="h-[15%] w-full flex justify-center items-center"><button className="w-[50%] h-[65%] border-solid border-[3px] border-[#fd5454] rounded-[20px] text-[1.5vw] text-white ">Login with Google</button></div>
                 <div className="h-[15%] w-full flex justify-center items-center"><button className="w-[50%] h-[65%] border-solid border-[3px] border-[#fd5454] rounded-[20px] text-[1.5vw] text-white">Login with Github</button></div>
