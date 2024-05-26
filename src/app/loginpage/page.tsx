@@ -55,10 +55,10 @@ export default function LoginPage() {
               </div>
             </div>
           </div>
-          <div className="absolute top-10 left-20 h-[10vh] bg-[#161616]">
-            <div className="">
-              <Link href="/about" className="mr-10">About us</Link> 
-              <Link href="/contact">Contact us</Link>
+          <div className="absolute top-10 left-20 h-[5vh]  flex justify-center items-center rounded-[20px] bg-[#161616]">
+            <div className="mx-[2vw]">
+              <Link href="/about" className="mr-10 hover-effect">About us</Link> 
+              <Link href="/contact" className="hover-effect">Contact us</Link>
             </div>
           </div>
         </main>
