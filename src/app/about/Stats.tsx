@@ -12,10 +12,10 @@ export const Stats = () => {
             <span>What's in it for you</span>
           </h4>
           <div className={styles.statGrid}>
-            <span className="chip">->Collaboration</span>
-            <span className="chip">->Competittion among peers</span>
-            <span className="chip">->Access to CalSet</span>
-            <span className="chip">->User Friendly Access</span>
+            <span className="chip">Collaboration</span>
+            <span className="chip">Competittion among peers</span>
+            <span className="chip">Access to CalSet</span>
+            <span className="chip">User Friendly Access</span>
           </div>
         </div>
       </Reveal>
