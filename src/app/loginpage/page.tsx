@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { GoogleSignInBtn, GithubSignInBtn } from "../components/authButtons";
 
 export default function LoginPage() {
@@ -52,6 +53,12 @@ export default function LoginPage() {
                   <GithubSignInBtn />
                 </div>
               </div>
+            </div>
+          </div>
+          <div className="absolute top-10 left-20 h-[10vh] bg-[#161616]">
+            <div className="">
+              <Link href="/about" className="mr-10">About us</Link> 
+              <Link href="/contact">Contact us</Link>
             </div>
           </div>
         </main>

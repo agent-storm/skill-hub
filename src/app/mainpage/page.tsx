@@ -21,6 +21,9 @@ export default async function Mainstats() {
                 <Link href="/api/auth/signout?callbackUrl=/">
                     Logout
                 </Link>
+                <Link href="../about">
+                    About us
+                </Link>
             </div>
             <div className="grid grid-cols-3
                             h-[62%] border border-solid border-black
