@@ -6,7 +6,8 @@ The one stop to know it all.
 
 ### Libs to install: <br>
 - For installing nextJS - `npm install next`
-- For the icon pack - `npm install react-icons`
+- For the icon pack     - `npm install react-icons`
+- For next-auth         - `npm install next-auth`
 <br>
 
 Authored by:
