@@ -9,7 +9,17 @@ The one stop to know it all.
 - For the icon pack     - `npm install react-icons`
 - For next-auth         - `npm install next-auth`
 <br>
+### Setup process:
+1. Clone the repo to your local machine.<br>
+2. Install hte above mentioned libraries/dependencies.<br>
+3. Use the OAuth credentials from google cloud console and insert them in the `.env` file.<br>
+```
+GOOGLE_CLIENT_ID = 
+GOOGLE_CLIENT_SECRET = 
+NEXTAUTH_SECRET = (some random sentence)
+```
 
+<br>
 Authored by:
 <br>
 Srinith | Shiva | Raghav
