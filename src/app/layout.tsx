@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { getServerSession } from 'next-auth'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,13 +14,10 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const data = await getServerSession();
-  console.log(data);
   return (
     <html lang="en">
       <body className={inter.className}>
         {children}
-        <h5>Data: {JSON.stringify(data)}</h5>
       </body>
     </html>
   );
