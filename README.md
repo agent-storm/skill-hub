@@ -6,12 +6,24 @@ The one stop to know it all.
 
 ### Libs to install: <br>
 - For installing nextJS - `npm install next`
-- For the icon pack - `npm install react-icons`
-<br>
+- For the icon pack     - `npm install react-icons`
+- For next-auth         - `npm install next-auth`
 
+
+### Setup process:
+1. Clone the repo to your local machine.<br>
+2. Install hte above mentioned libraries/dependencies.<br>
+3. Use the OAuth credentials from google cloud console and insert them in the `.env` file.<br>
+```
+GOOGLE_CLIENT_ID = 
+GOOGLE_CLIENT_SECRET = 
+NEXTAUTH_SECRET = (some random sentence)
+```
+
+<br>
 Authored by:
 <br>
 Srinith | Shiva | Raghav
-<br>
+
 ### test-site-link: https://skill-hub-git-master-agent-storms-projects.vercel.app
 
