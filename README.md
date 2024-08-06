@@ -8,7 +8,8 @@ The one stop to know it all.
 - For installing nextJS - `npm install next`
 - For the icon pack     - `npm install react-icons`
 - For next-auth         - `npm install next-auth`
-<br>
+
+
 ### Setup process:
 1. Clone the repo to your local machine.<br>
 2. Install hte above mentioned libraries/dependencies.<br>
@@ -23,6 +24,6 @@ NEXTAUTH_SECRET = (some random sentence)
 Authored by:
 <br>
 Srinith | Shiva | Raghav
-<br>
+
 ### test-site-link: https://skill-hub-git-master-agent-storms-projects.vercel.app
 
