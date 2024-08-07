@@ -13,7 +13,7 @@ export default function NavBar() {
                         text-white bg-[#2b2a2a]
                         shadow-lg rounded-3xl overflow-hidden">
             <SideBarIcon icon={<IoLogOutOutline size="28" />} url="/api/auth/signout?callbackUrl=/" />
-            <SideBarIcon icon={<FaRegEdit size="25" />} />
+            <SideBarIcon icon={<FaRegEdit size="25" />} url="/mainpage/editUserName" />
             <SideBarIcon icon={<TiInfoLargeOutline size="30" />} url="/about" />
         </div>
     )
