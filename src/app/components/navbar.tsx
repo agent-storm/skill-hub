@@ -3,6 +3,9 @@ import { FaRegEdit } from "react-icons/fa";
 import { TiInfoLargeOutline } from "react-icons/ti";
 import Link from "next/link";
 
+
+
+
 export default function NavBar() {
     return (
         <div className="drop-shadow-2xl fixed z-10 
