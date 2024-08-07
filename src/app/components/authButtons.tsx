@@ -6,16 +6,7 @@ import { signIn } from 'next-auth/react';
 
 export function GoogleSignInBtn() {
   const handleClick = async () => {
-    // const { data: session, status } = useSession();
-    // const router = useRouter();
-    // useEffect(() => {
-    //   // If user is authenticated, redirect to main page
-    //   if (status === 'authenticated') {
-    //     router.push('../mainpage');
-    //   }
-    // }, [status, router]);
     signIn("google");
-    
   };
   return (
     <div className="h-[15%] w-full flex justify-center items-center">
