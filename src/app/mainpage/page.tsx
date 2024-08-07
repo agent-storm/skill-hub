@@ -19,13 +19,13 @@ export default async function Mainstats() {
         } else if (req == "fetch-all") {
             fetchAllData();
         } else if (req == "insert") {
-            insertUserData("1234")
+            insertUserData()
         }
 
     }
     console.log("Calling method for isnert");
     // console.log(btoa((session?.user?.email)?.split("@")[0] || "default_user"));
-    insertUserData(btoa((session?.user?.email)?.split("@")[0] || "default_user"));
+    // insertUserData(btoa((session?.user?.email)?.split("@")[0] || "default_user"));
     return (
         <main className="flex flex-col min-h-screen bg-[#232323] w-full p-4">
             <div className="flex flex-col md:flex-row justify-between mb-8">
