@@ -1,0 +1,32 @@
+.popup-container {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border: none; /* Remove default button border */
+    padding: 0; /* Remove default button padding */
+    cursor: pointer; /* Pointer cursor to indicate it's clickable */
+}
+
+.popup-content {
+    background-color: #333; /* Background color of the popup */
+    color: #fff; /* Text color */
+    border-top: 2px solid #ff461e; /* Border color */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 20px; /* Padding inside the popup */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for better visibility */
+    display: flex; /* Ensure the content is centered */
+    align-items: center;
+    justify-content: center;
+    width: 300px; /* Fixed width for consistency */
+    height: auto; /* Allow height to adjust based on content */
+}
+
+.popup-content span {
+    margin-right: 10px; /* Space between message and close button */
+}
+
+.popup-container:hover .popup-content {
+    background-color: #444; /* Slightly lighter background on hover */
+}
