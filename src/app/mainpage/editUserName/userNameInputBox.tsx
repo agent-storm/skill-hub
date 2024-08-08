@@ -1,8 +1,19 @@
-export default function UsernameInputBox(props:{platform_name:string}){
-    return(
-        <div className="flex justify-center item-center h-[15%] w-[80%] m-[1vh] border-solid border-[2px] p-[1vw] rounded-[15px]">
-            <h1 className="flex justify-center item-center w-[50%] text-[2.5vw]">{props.platform_name}:</h1>
-            <input type="text" className="flex justify-center item-center w-[50%] text-[2.5vw] text-[#151515] text-center rounded-[15px] align-center" />
+"use client";
+import React from 'react';
+
+// UsernameInputBox component
+export default function UsernameInputBox({ platformName, username, setUsername }: { platformName: string; username: string; setUsername: React.Dispatch<React.SetStateAction<string>> }) {
+    return (
+        <div className="flex flex-col md:flex-row items-center justify-between w-full md:w-4/5 mb-6 p-4 border border-gray-600 rounded-md bg-gray-700">
+            <h1 className="text-xl md:text-2xl lg:text-3xl text-gray-100 w-full md:w-1/2 text-center mb-2 md:mb-0">
+                {platformName}
+            </h1>
+            <input 
+                type="text" 
+                value={username} 
+                onChange={(e) => setUsername(e.target.value)}
+                className="w-full md:w-1/2 text-base md:text-lg text-gray-800 text-center rounded-md py-2 px-4"
+            />
         </div>
-    )
+    );
 }

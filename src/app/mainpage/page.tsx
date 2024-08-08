@@ -3,7 +3,6 @@ import Add from '@/app/components/add';
 import { authConfig } from '../auth';
 import { getServerSession } from 'next-auth';
 import { redirect } from 'next/navigation';
-import { fetchUserData,fetchAllData,insertUserData } from '@/app/mainpage/dataHandling';
 import Image from 'next/image';
 import "./mainpage.css";
 
@@ -13,19 +12,6 @@ export default async function Mainstats() {
         redirect('/loginpage');
     }
     
-    function handleClick(req: string){
-        if(req == "fetch-user"){
-            fetchUserData("uid");
-        } else if (req == "fetch-all") {
-            fetchAllData();
-        } else if (req == "insert") {
-            insertUserData()
-        }
-
-    }
-    console.log("Calling method for isnert");
-    // console.log(btoa((session?.user?.email)?.split("@")[0] || "default_user"));
-    // insertUserData(btoa((session?.user?.email)?.split("@")[0] || "default_user"));
     return (
         <main className="flex flex-col min-h-screen bg-[#232323] w-full p-4">
             <div className="flex flex-col md:flex-row justify-between mb-8">
