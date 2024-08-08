@@ -1,3 +1,13 @@
+/* 
+This is a popup notification component you can use to display some message to the user.
+USECASE: 
+import PopupNotification from "path";
+    <PopupNotification 
+        message="message to display to the user"
+        onclick={onClose}
+    />
+
+*/
 import React from 'react';
 import './PopupNotification.css'; // Import the CSS file for styling
 

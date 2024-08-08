@@ -1,10 +1,12 @@
 /* 
+This page is where the user can manage his/her usernames in various platforms.
+    STATUS: Basic insert functionality working.
     TODO:
         1.Add a button beside update button called "get current usernames" that will display the current usernames of the logged in user.
         2.Show a notification popup at the bottom left to tell user that update is done.
         3.If user already exists, only update the chnages.
         4.IF all fields are null, popup a warning.
-
+~Srinith
 */
 
 "use client";
@@ -82,6 +84,5 @@ export default function UserNameInput() {
                             onClose={()=>setshowPopup(false)}
                         />)}
         </div>
-        
     );
 }
