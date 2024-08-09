@@ -110,7 +110,10 @@ export async function insertUserRating(uid:string) {
     await supabase.from("ratings").upsert([ratingData])
     .then(()=>{})
 }
-
+/*
+ * This method takes a list of usernames as input and pushes them to the "usernames" DB
+ * It It will insert new users data and also updates existing users data.
+ */
 export async function insertUsernameData(usernames:Record<string,string>){
     try {
         const uid = await getSessionID();
