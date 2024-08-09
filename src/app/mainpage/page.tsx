@@ -5,13 +5,16 @@ import { getServerSession } from 'next-auth';
 import { redirect } from 'next/navigation';
 import Image from 'next/image';
 import "./mainpage.css";
+import { getUserRatings } from './dataHandling';
+import getSessionID from '../authSessionExport';
 
 export default async function Mainstats() {
     const session = await getServerSession(authConfig);
     if (!session) {
         redirect('/loginpage');
     }
-    
+    // insertUserRating(await getSessionID());
+    console.log("In main page:",await getUserRatings(await getSessionID()));
     return (
         <main className="flex flex-col min-h-screen bg-[#232323] w-full p-4">
             <div className="flex flex-col md:flex-row justify-between mb-8">
