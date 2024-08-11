@@ -17,7 +17,6 @@ import UsernameInputBox from './userNameInputBox';
 import { insertUsernameData } from '../dataHandling';
 import PopupNotification from '@/app/components/popupNotification/popupNotification';
 import './editUserName.css';    
-import { supabase } from '@/app/utils/supabase/server';
 
 export default function UserNameInput() {
     // State variables for each platform's username
@@ -48,20 +47,20 @@ export default function UserNameInput() {
     }
 
     return (
-        <div className='flex items-center justify-center h-screen w-screen px-4'>
+        <div className='flex items-center justify-center h-screen w-screen px-4 bg-primary_bg'>
             <div className="flex flex-col items-center justify-center max-w-screen-md w-full">
                 <div className="flex flex-col md:flex-row items-center justify-between w-full mb-6">
                     <div className='flex items-center justify-center text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-100 w-full md:w-3/5 mb-4 md:mb-0'>
-                        Register Usernames
+                        <span className='text-text-gray-100'>Register<span className="text-accent_color_primary"> Usernames</span></span>
                     </div>
                     <button 
-                        className="flex items-center justify-center bg-gray-600 rounded-md py-2 px-4 text-white text-base md:text-lg w-[50%]"
+                        className="flex items-center justify-center bg-button_color_primary hover:bg-accent_color_primary hover:text-black rounded-md py-2 px-4 text-white text-base md:text-lg w-[50%] duration-[0.5s]"
                         onClick={handleClick}
                     >
                         {loading ? 'Updating...' : 'Update'}
                     </button>
                 </div>
-                <div className="flex flex-col items-center justify-center w-full bg-gray-800 rounded-lg py-6">
+                <div className="flex flex-col items-center justify-center w-full bg-secondary_bg rounded-lg py-6">
                     <UsernameInputBox 
                         platformName="Leetcode" 
                         username={leetcodeUsername} 
